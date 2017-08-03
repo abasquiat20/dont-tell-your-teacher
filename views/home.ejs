@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <link rel="icon" href="tumblebooks.jpg">
+        <title>
+            Don't Tell Your Teacher
+        </title>
+   <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Satisfy" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Load Styles -->
+    <link href="https://www.gstatic.com/realtime/quickstart-styles.css" rel="stylesheet" type="text/css"/>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="799056504889-b2l5u84rna9grjeftaeh5r637jdj0t1k.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC6dWRY2LLKNi5JYK9WziBtj-j-cMxlmD0",
+        authDomain: "messenger-app-578c7.firebaseapp.com",
+        databaseURL: "https://messenger-app-578c7.firebaseio.com",
+        projectId: "messenger-app-578c7",
+        storageBucket: "messenger-app-578c7.appspot.com",
+        messagingSenderId: "799056504889"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js'></script>
+    <!-- Load the Realtime JavaScript library -->
+  <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+    <!-- Load the utility library -->
+    <script src="https://www.gstatic.com/realtime/realtime-client-utils.js"></script>    
+    <meta name='viewport' content='initial-scale=1.0, user-scalable=no'>
+    <meta charset='utf-8'>
+    
+  </head>
+    <body class="homeBody">
+    
+     <div>  
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li> 
+  </ul>
+  </div>
+  
+  <nav>
+  <div class="nav-wrapper grey">
+       <a href="#" class="left brand-logo" id= "logoName"><font size= "6" font face="Oswald, sans-serif">Don't Tell Your Teacher!</font></a>
+   <a href="#" class="brand-logo center"><img class="homeworkLogo" src="http://lyonslibrary.org/wp-content/uploads/2014/08/tumblebooks.jpg" /></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/quizlet">Study Center</a></li>
+      <li><a href="badges.html">Share Google Docs</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+       </div>
+        <div id="chatwee-root">
+        </div>
+  <main>
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+     
+    <!--<center>  <h3 class= "h1">Realtime Collaboration Quickstart</h3><center>-->
+    <!--  <p>Now that your application is running, simply type in either text box and see your changes instantly appear in the other one. Open-->
+    <!--  this same document in a <a onclick="window.open(window.location.href);return false;" target="_blank">new tab</a> to see it work across tabs.</p>-->
+    <!--  <textarea id="text_area_1"></textarea>-->
+    <!--  <textarea id="text_area_2"></textarea>-->
+    <!--  <button id="auth_button">Authorize</button>-->
+      <iframe src="https://drive.google.com/file/d/0B8k7wVxMhfbZbGFianktdnFPWEU/preview?usp=drivesd" style="width:680px; height:860px;" frameborder="0"></iframe>
+    <main>
+    <script>
+      var clientId = '799056504889-b2l5u84rna9grjeftaeh5r637jdj0t1k.apps.googleusercontent.com';
+
+      if (!/^([0-9])$/.test(clientId[0])) {
+        alert('Invalid Client ID - did you forget to insert your application Client ID?');
+      }
+      // Create a new instance of the realtime utility with your client ID.
+      var realtimeUtils = new utils.RealtimeUtils({ clientId: clientId });
+
+      authorize();
+
+      function authorize() {
+        // Attempt to authorize
+        realtimeUtils.authorize(function(response){
+          if(response.error){
+            // Authorization failed because this is the first time the user has used your application,
+            // show the authorize button to prompt them to authorize manually.
+            var button = document.getElementById('auth_button');
+            button.classList.add('visible');
+            button.addEventListener('click', function () {
+              realtimeUtils.authorize(function(response){
+                start();
+              }, true);
+            });
+          } else {
+              start();
+          }
+        }, false);
+      }
+      
+      function onSuccess(res){
+        console.log('success')
+        console.log(res)
+      }
+      
+      function onError(err){
+        console.log('fail')
+        console.log(err)
+      }
+      
+      function onFileLoaded(file){
+        console.log('loaded')
+        console.log(file)
+      }
+
+      function start() {
+        gapi.load("auth:client,drive-realtime,drive-share", getItGoing)
+      }
+      
+      function getItGoing(){
+        console.log('yup')
+        
+        var request = window.gapi.client.request({
+          // path: 'https://www.googleapis.com/upload/drive/v3/files'
+          // path: `https://www.googleapis.com/drive/v2/files/16g-IL_KJJ5yb-4FPVwUHYhOU77gD8-Fni2LC-RAwldU`
+          path: 'https://www.googleapis.com/drive/v2/files/0B8k7wVxMhfbZbGFianktdnFPWEU'
+          // path: 'https://www.googleapis.com/drive/v3/files'
+        })
+        
+        request.execute(function(res){
+          console.log(res)
+          gapi.drive.realtime.load(res.id, onFileLoaded, onSuccess, onError);        
+        })
+        
+        // var thing = gapi.drive.files.create()
+        // console.log(thing)
+        // .then(function(res){
+        //   console.log(res)
+        // })
+        // .catch(function(err){
+        //   console.log(err)
+        // })
+      }
+
+    </script>
+    
+        <script src="https://chatwee-api.com/v2/script/59809d69bd616da17360d902.js"></script>
+    </body>
+</html>
