@@ -1,3 +1,4 @@
+
 var logger = require('morgan')
 var bodyParser = require('body-parser')
 var express = require('express')
@@ -21,18 +22,33 @@ app.use(logger('dev'))
 app.get('/', function(request, response) {
     response.render('home.ejs')
 })
+
     
-     app.get('/quizlet', function(request, response){
-    response.render('quizlet.ejs')
-    })
+    app.get('/docs', function(request, response) {
+    response.render('docs.ejs')
+})
+
+  app.get('/math', function(request, response) {
+    response.render('math330.ejs')
+})
 
 
+  app.get('/history', function(request, response) {
+    response.render('history.ejs')
+})
+
+app.get('/english', function(request, response) {
+    response.render('english.ejs')
+})
+
+app.get('/science', function(request, response) {
+    response.render('science.ejs')
+})
 
 var port= process.env.PORT||8080
 app.listen(port, function(){
         console.log(`App running on ${port}.`)
 })
-
 
 
 
@@ -44,3 +60,4 @@ app.listen(port, function(){
 // MupMdrAagktbnHPvqTZVTk (reset)
 // Your Redirect URI:
 // https://dont-tell-abasquiat20.c9users.io/?_c9_id=livepreview1&_c9_host=https://ide.c9.io (double-click to edit) 
+

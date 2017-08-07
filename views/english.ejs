@@ -43,12 +43,12 @@
   </head>
 <body class="homeBody">
     
- <!-- Dropdown Structure -->
+<!-- Dropdown Structure -->
+
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="https://www.wyzant.com/">Find a Tutor</a></li>
   <li><a href="https://www.scholarships.com/">Scholarships</a></li>
 </ul>
-
 <nav>
     <div class="nav-wrapper cyan lighten-1">
 <font size= "6" font face="Oswald, sans-serif">Don't Tell Your Teacher!</font>
@@ -58,7 +58,6 @@
       <li><button onclick="signIn()">Sign In</button></li>
       <li><a href="https://quizlet.com/">Study Center</a></li>
       <li><a href="/docs">Share Google Docs</a></li>
-      
       
       <!-- Dropdown Trigger -->
       <li><a class="dropdown-button" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -71,11 +70,10 @@
         <div id="chatwee-root">
         </div>
         <div class="container" style="padding: 2%; margin: 0 auto;">
-             </div>
-      <!--<div class="g-signin2 center" data-onsuccess="onSignIn" data-theme="dark"></div>-->
-</main>
-      
-       <!--<div class="push">-->
+               <h1 class="center white-text">English 200</h1>
+             <iframe src="https://docs.google.com/document/d/1u8_dQen_4N2BQIB6KGp7ysZSepBu2KLdRvc2rpmzOjg/pub?embedded=true"></iframe>
+        </div>    
+ </main>  
 
   <footer class="footer"></footer>
         <footer class="page-footer cyan lighten-1">
@@ -127,139 +125,16 @@
       </div>
     </div>
 </footer>
-      
-      
-      
-    <script>
-    
-      // function onSignIn(googleUser) {
-      //   // Useful data for your client-side scripts:
-      //   var profile = googleUser.getBasicProfile();
-      //   console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      //   console.log('Full Name: ' + profile.getName());
-      //   console.log('Given Name: ' + profile.getGivenName());
-      //   console.log('Family Name: ' + profile.getFamilyName());
-      //   console.log("Image URL: " + profile.getImageUrl());
-      //   console.log("Email: " + profile.getEmail());
-
-      //   // The ID token you need to pass to your backend:
-      //   var id_token = googleUser.getAuthResponse().id_token;
-      //   console.log("ID Token: " + id_token);
-      // };
-    </script>
+   
      
-    <!--<center>  <h3 class= "h1">Realtime Collaboration Quickstart</h3><center>-->
-    <!--  <p>Now that your application is running, simply type in either text box and see your changes instantly appear in the other one. Open-->
-    <!--  this same document in a <a onclick="window.open(window.location.href);return false;" target="_blank">new tab</a> to see it work across tabs.</p>-->
-    <!--  <textarea id="text_area_1"></textarea>-->
-    <!--  <textarea id="text_area_2"></textarea>-->
-    <!--  <button id="auth_button">Authorize</button>-->
-    
-  
-    <script>
-      // var clientId = '799056504889-b2l5u84rna9grjeftaeh5r637jdj0t1k.apps.googleusercontent.com';
-
-      // if (!/^([0-9])$/.test(clientId[0])) {
-      //   alert('Invalid Client ID - did you forget to insert your application Client ID?');
-      // }
-      // // Create a new instance of the realtime utility with your client ID.
-      // var realtimeUtils = new utils.RealtimeUtils({ clientId: clientId });
-
-      // authorize();
-
-      // function authorize() {
-      //   // Attempt to authorize
-      //   realtimeUtils.authorize(function(response){
-      //     if(response.error){
-      //       // Authorization failed because this is the first time the user has used your application,
-      //       // show the authorize button to prompt them to authorize manually.
-      //       var button = document.getElementById('auth_button');
-      //       button.classList.add('visible');
-      //       button.addEventListener('click', function () {
-      //         realtimeUtils.authorize(function(response){
-      //           start();
-      //         }, true);
-      //       });
-      //     } else {
-      //         start();
-      //     }
-      //   }, false);
-      // }
-      
-      // function onSuccess(res){
-      //   console.log('success')
-      //   console.log(res)
-      // }
-      
-      // function onError(err){
-      //   console.log('fail')
-      //   console.log(err)
-      // }
-      
-      // function onFileLoaded(file){
-      //   console.log('loaded')
-      //   console.log(file)
-      // }
-
-      // function start() {
-      //   gapi.load("auth:client,drive-realtime,drive-share", getItGoing)
-      // }
-      
-      // function getItGoing(){
-      //   console.log('yup')
-        
-      //   var request = window.gapi.client.request({
-      //     // path: 'https://www.googleapis.com/upload/drive/v3/files'
-      //     // path: `https://www.googleapis.com/drive/v2/files/16g-IL_KJJ5yb-4FPVwUHYhOU77gD8-Fni2LC-RAwldU`
-      //     path: 'https://www.googleapis.com/drive/v2/files/0B8k7wVxMhfbZbGFianktdnFPWEU'
-      //     // path: 'https://www.googleapis.com/drive/v3/files'
-      //   })
-        
-      //   request.execute(function(res){
-      //     console.log(res)
-      //     gapi.drive.realtime.load(res.id, onFileLoaded, onSuccess, onError);        
-      //   })
-        
-      //   // var thing = gapi.drive.files.create()
-      //   // console.log(thing)
-      //   // .then(function(res){
-      //   //   console.log(res)
-      //   // })
-      //   // .catch(function(err){
-      //   //   console.log(err)
-      //   // })
-        
-      // }
-      
-      //   var onValueAdded = function(event) {
-      //     console.log("Items added", event.values);
-      //   };
-        
-      //   // var list = model.createList();
-      //   // list.addEventListener(gapi.drive.realtime.EventType.VALUES_ADDED, onValueAdded);
-        
-      //   // console.log("Adding item 1");
-      //   // list.push("Hello");
-      //   // console.log("Adding item 2");
-      //   // list.push("World");        
-        
-      //   function onStringChanged(evt) {
-      //     // Log the event to the console.
-      //     console.log(evt);
-      //   }
-        
-      //   function onFileLoaded(doc) {
-      //     console.log(doc)
-      //     // Get the field named "text" in the root map.
-      //     // var text = doc.getModel().getRoot().get("text");
-      //     // Connect the event to the listener.
-      //     // text.addEventListener(gapi.drive.realtime.EventType.TEXT_INSERTED, onStringChanged);
-      //   }       
-
-    </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js'></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://chatwee-api.com/v2/script/59809d69bd616da17360d902.js"></script>
     </body>
 </html>
+
+
+
+
+
