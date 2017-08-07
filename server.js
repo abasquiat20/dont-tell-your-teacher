@@ -49,6 +49,11 @@ app.get('/about', function(request, response) {
     response.render('about.ejs')
 })
 
+
+app.get('/login', function(request, response) {
+    response.render('login.ejs')
+})
+
 app.get('/french', function(request, response) {
     response.render('french.ejs')
 })
