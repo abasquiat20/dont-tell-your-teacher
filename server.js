@@ -45,11 +45,20 @@ app.get('/science', function(request, response) {
     response.render('science.ejs')
 })
 
+app.get('/about', function(request, response) {
+    response.render('about.ejs')
+})
+
+app.get('/french', function(request, response) {
+    response.render('french.ejs')
+})
+
 var port= process.env.PORT||8080
 app.listen(port, function(){
         console.log(`App running on ${port}.`)
 })
 
+ 
 
 
 

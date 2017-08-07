@@ -92,3 +92,24 @@ background:  url("home.jpg") no-repeat center center fixed;
     width: 17px;
     height: 17px;
 }
+.about{
+    display:inline-block;
+    background-color: #26c6da ;
+}
+.iframe{
+    border-color: #26c6da;
+    border: 2px;
+}
+
+.aboutbody{
+    display:inline-block;
+    background-color: #26c6da;
+    border:2px;
+    border-color: white;
+    width: 800px;
+    height: 900px;
+    margin-left: 12%;
+}
+.nasdaq{
+    height:300px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <link rel="icon" href="tumblebooks.jpg">
+        <title>
+            Don't Tell Your Teacher
+        </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Satisfy" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Load Styles -->
+    <link href="https://www.gstatic.com/realtime/quickstart-styles.css" rel="stylesheet" type="text/css"/>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="799056504889-b2l5u84rna9grjeftaeh5r637jdj0t1k.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC6dWRY2LLKNi5JYK9WziBtj-j-cMxlmD0",
+        authDomain: "messenger-app-578c7.firebaseapp.com",
+        databaseURL: "https://messenger-app-578c7.firebaseio.com",
+        projectId: "messenger-app-578c7",
+        storageBucket: "messenger-app-578c7.appspot.com",
+        messagingSenderId: "799056504889"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js'></script>
+    <!-- Load the Realtime JavaScript library -->
+  <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+    <!-- Load the utility library -->
+    <script src="https://www.gstatic.com/realtime/realtime-client-utils.js"></script>    
+    <meta name='viewport' content='initial-scale=1.0, user-scalable=no'>
+    <meta charset='utf-8'>
+    
+  </head>
+<body class="homeBody">
+    
+ <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="https://www.wyzant.com/">Find a Tutor</a></li>
+  <li><a href="https://www.scholarships.com/">Scholarships</a></li>
+</ul>
+
+<nav>
+    <div class="nav-wrapper cyan lighten-1">
+<font size= "6" font face="Oswald, sans-serif">Don't Tell Your Teacher!</font>
+
+   <a href="#" class="brand-logo center"><img class="homeworkLogo" src="https://www.cmj.com/wordpress/wp-content/uploads/2014/05/avatars-000081407264-zlatp1-t500x500-660x660.jpg" /></a>
+    <ul class="right hide-on-med-and-down">
+      <li><button onclick="signIn()">Sign In</button></li>
+      <li><a href="https://quizlet.com/">Study Center</a></li>
+      <li><a href="/docs">Share Google Docs</a></li>
+      
+      
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+    
+    </ul>
+  </div>
+  
+</nav>
+<main>
+        <div id="chatwee-root">
+        </div>
+        <div class="container" style="padding: 2%; margin: 0 auto;">
+               <h1 class="white-text">Science 9000 Notes</h1>
+<iframe src="https://docs.google.com/document/d/1E0tTCxL_8WtPEVNn7pJ5zbiverseZCfpa8No1NiowJc/pub?embedded=true" height="700" width="700"></iframe>
+            </div>
+ </main>  
+
+  <footer class="footer"></footer>
+        <footer class="page-footer cyan lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Our Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of Prep for Prep IFE students. We did not only create Don't Tell Your Teacher because we were challenged to plan an app, but because we saw a problem in the average student's experiences. We knew that our app will help the everyday student save time.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Support</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Customer Support</a> </li>
+            <li><a class="grey-text text-lighten-3" href="#!">Site Map</a></li>
+          </ul>
+        </div>
+    
+        <div class="col l3 s12">
+          <h5 class="white-text">Follow Us</h5>
+          <ul>
+            <p>@DTYT</p>
+            <li>
+              <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            </li>
+            
+            <li>
+              <a href="https://twitter.com/login" class="fa fa-twitter"></a>
+            </li>
+            
+            <li>
+              <a href="https://www.instagram.com/accounts/login/" class="fa fa-instagram"></a>
+            </li>
+            
+            <li>
+              <a href="https://www.pinterest.com/ " class="fa fa-pinterest "></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright ">
+      <div class="container ">
+        © 2017 DontTellYourTeacher
+        <a class="grey-text text-lighten-4 right " href="#! ">More Links</a>
+      </div>
+    </div>
+</footer>
+   
+     
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js'></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://chatwee-api.com/v2/script/59809d69bd616da17360d902.js"></script>
+    </body>
+</html>
+
